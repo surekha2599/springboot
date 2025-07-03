@@ -8,3 +8,4 @@ public class Student {
     public void attendClass() {
         System.out.println("Student is attending the class.");
     }
+}
