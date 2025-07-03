@@ -3,19 +3,22 @@ package org.example;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        ApplicationContext Student = new ClassPathXmlApplicationContext();
-        Student s= context.getBean("st");
+public class App {
+    public static void main(String[] args) {
+        ApplicationContext context = new ClassPathXmlApplicationContext("resource.xml");
 
-        System.out.println( "Hello World!" );
+        Student student = (Student) context.getBean("student");
+        student.register();
+        student.attendClass();
 
+        group groupObj = (group) context.getBean("group");
+        groupObj.formGroup();
+        groupObj.assignLeader();
 
+        course courseObj = (course) context.getBean("course");
+        courseObj.enroll();
+        courseObj.conductExam();
+
+        System.out.println("All methods executed.");
     }
 }

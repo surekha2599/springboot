@@ -1,10 +1,11 @@
 package org.example;
 
 public class Student {
-    public Student() {
-        System.out.println("Inside student class");
+    public void register() {
+        System.out.println("Student has been registered.");
     }
-    public void internshipProgram(){
-        System.out.println("attending springboot knside");
+
+    public void attendClass() {
+        System.out.println("Student is attending the class.");
     }
 }
